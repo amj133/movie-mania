@@ -11,7 +11,7 @@ class DirectorsController < ApplicationController
   def create
     @director = Director.new(director_params)
     if @director.save
-      redirect_to "/directors/#{@director.id}"
+      redirect_to director_path(@director)
     else
       render :new # this is not a redirect
       # showing a new view but path is from directors

@@ -1,0 +1,10 @@
+<%= form_for([@director, @movie]) do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+
+  <%= f.submit %>
+  <!-- button aalways says create resource (singular) -->
+<% end %>
