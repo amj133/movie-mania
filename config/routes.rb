@@ -3,6 +3,11 @@ Rails.application.routes.draw do
   # get '/movies', to: "movies#index"
   root "movies#index"
 
-  resources :movies
-  resources :directors
+  # resources :movies
+  # resources :directors
+  # above those resources are independent
+
+  resources :directors, shallow: true do
+    resources :movies
+  end
 end
