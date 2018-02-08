@@ -1,0 +1,35 @@
+$light-purple: #6369D1;
+$ice-blue: #60E1E0;
+$grayish: #D8D2E1;
+$light-brown: #B88E8D;
+$dark-navy: #34435E;
+$movie-border: $grayish 3px dotted;
+
+.movie-index {
+  background-color: $grayish;
+  padding: 5px;
+
+  h1 {
+    color: $light-brown;
+    font-family: fantasy;
+  }
+
+  h2 {
+    font-family: fantasy;
+    color: $ice-blue;
+  }
+
+  p {
+    font-family: cursive;
+    border: $movie-border;
+    border: $dark-navy 3px dotted;
+    text: {
+      align: center;
+      decoration: underline;
+    }
+    font: {
+      family: papyrus;
+      size: 15px;
+    }
+  }
+}

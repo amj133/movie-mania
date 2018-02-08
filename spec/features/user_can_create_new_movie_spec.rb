@@ -2,7 +2,8 @@ require 'rails_helper'
 
 describe "user creates new movie" do
   it "fills in relevant information" do
-    director = Director.create!(name: "Ilana")
+    # director = Director.create!(name: "Ilana")
+    director = create(:director) # this way is using factor bot
 
     visit new_director_movie_path(director)
 
@@ -12,6 +13,6 @@ describe "user creates new movie" do
 
     expect(page).to have_content("Finding Nemo")
     expect(page).to have_content("A sad fish story")
-    expect(page).to have_content("Ilana")
+    expect(page).to have_content(director.name)
   end
 end
