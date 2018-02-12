@@ -2,6 +2,7 @@ class DirectorsController < ApplicationController
 
   def show
     @director = Director.find(params[:id])
+    session[:secret] = "This time for real though"
   end
 
   def new
