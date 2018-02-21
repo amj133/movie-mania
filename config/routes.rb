@@ -13,8 +13,11 @@ Rails.application.routes.draw do
 
   resources :users, only: [:new, :create, :show]
 
+  namespace :admin do
+    resources :categories, only: [:index]
+  end
   # any custom routes (except root) should be below other resources
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
-  delete '/login', to: 'sessions#destroy' 
+  delete '/logout', to: 'sessions#destroy'
 end

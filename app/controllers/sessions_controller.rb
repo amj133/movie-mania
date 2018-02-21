@@ -14,7 +14,8 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    session.clear
+    # session.delete(:user_id)
+    session.destroy # will destroy all open sessions (could have a shopping cart)
 
     redirect_to login_path
   end

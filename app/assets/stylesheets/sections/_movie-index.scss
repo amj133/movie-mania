@@ -1,0 +1,14 @@
+@mixin movie-border-circle($radius) {
+  border: $dark-navy 3px dotted;
+  border-radius: $radius;
+}
+
+.movie-index {
+  background-color: $grayish;
+  padding: 5px;
+
+  p {
+    @include movie-border-circle(100%);
+  }
+
+}
