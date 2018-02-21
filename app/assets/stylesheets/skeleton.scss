@@ -1,0 +1,25 @@
+h1 {
+  font: {
+    family: $font-default;
+  }
+  color: $light-brown;
+}
+
+h2 {
+  font-family: fantasy;
+  color: $ice-blue;
+}
+
+p {
+  font-family: cursive;
+  // border: $movie-border;
+  border: $dark-navy 3px dotted;
+  text: {
+    align: center;
+    decoration: underline;
+  }
+  font: {
+    family: papyrus;
+    size: 15px;
+  }
+}
